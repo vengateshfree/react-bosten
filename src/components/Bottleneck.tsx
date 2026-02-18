@@ -76,7 +76,7 @@ function Bottleneck() {
     </div>
 
     <span className="text-sm font-semibold tracking-wide text-[#0B3C8A] uppercase">
-      Our Services
+     Breaking the Innovation Barrier
     </span>
   </div>
 
@@ -120,7 +120,7 @@ infrastructure. Teams often waste countless hours on repetitive, manual tasks:
                 <div
                   className={`absolute top-0 right-0 w-32 h-32  bg-gradient-to-br ${item.glowGradient} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500 rounded-full`}
                 ></div>
-
+ 
                 <div className="relative">
 
                   {/* Icon */}
@@ -132,13 +132,13 @@ infrastructure. Teams often waste countless hours on repetitive, manual tasks:
 
                   {/* Title */}
                   <h3
-                    className={`text-2xl font-bold text-[#1E5DB3] mb-4  transition-colors duration-300`}
+                    className={`text-xl font-semibold text-[#1E5DB3] mb-4  transition-colors duration-300`}
                   >
                     {item.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-gray-600 leading-relaxed ">
                     {item.description}
                   </p>
 

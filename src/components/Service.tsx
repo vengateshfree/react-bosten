@@ -81,7 +81,7 @@ function Service() {
     </div>
 
     <span className="text-sm font-semibold tracking-wide text-[#0B3C8A] uppercase">
-      Our Services
+     End-to-End Infrastructure & AI Solutions
     </span>
   </div>
 
@@ -131,7 +131,7 @@ function Service() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">
+                <h3 className="text-xl font-semibold text-[#1E5DB3] mb-3 group-hover:text-cyan-600 transition-colors">
                   {service.title}
                 </h3>
                 

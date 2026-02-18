@@ -73,7 +73,7 @@ import Partner from "./components/Partner"
 import Service from "./components/Service"
 import Suit from "./components/Suit"
 import Footer from "./components/Footer"
-import logo from "./assets/tlogo.png"; // replace with your logo path
+import logo from "./assets/fulllogo.png"; // replace with your logo path
 import Contact from "./components/Contact"
 
 function App() {
@@ -91,31 +91,33 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen w-screen overflow-hidden">
+    <div id="home" className="min-h-screen w-screen overflow-hidden">
 
       {/* Navbar */}
     <nav
   className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-500 ${
     scrolled
-      ? "bg-black shadow-lg border-white/10"
+      ? "bg-black/30 backdrop-blur-md border-white/20"
       : "bg-black/30 backdrop-blur-md border-white/20"
   }`}
 >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
 
           {/* Logo */}
           {/* Logo */}
           <div className="flex items-center space-x-3 text-white">
             <img src={logo} alt="Logo" className="w-14 h-14 object-contain" />
-            <span className="text-lg font-bold">Boston Tech <br /> India</span>
+            {/* <span className="text-lg font-bold">Boston Tech <br /> India</span> */}
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-white font-medium">
-            <a href="#" className="hover:text-blue-600 transition">Home</a>
-            <a href="#" className="hover:text-blue-600 transition">About</a>
-            <a href="#" className="hover:text-blue-600 transition">Services</a>
-            <a href="#" className="hover:text-blue-600 transition">Contact</a>
+            <a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#product">Product</a>
+<a href="#contact">Contact</a>
+
           </div>
 
           {/* Mobile Button */}
@@ -130,10 +132,12 @@ function App() {
         {/* Mobile Menu */}
         {open && (
           <div className="md:hidden bg-white/90 backdrop-blur-lg px-6 pb-6 space-y-4 text-black font-medium">
-            <a href="#" className="block">Home</a>
-            <a href="#" className="block">About</a>
-            <a href="#" className="block">Services</a>
-            <a href="#" className="block">Contact</a>
+            <a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#product">Product</a>
+<a href="#contact">Contact</a>
+
           </div>
         )}
       </nav>
@@ -160,13 +164,23 @@ function App() {
         {/* Content */}
      {/* Content */}
 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
-
+{/* <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-[#0B3C8A]">
+   Bridging Infrastructure <br />
+   with Intelligent  {" "}
+    <span className="bg-gradient-to-r 
+      from-[#0B3C8A] 
+      via-[#1E5DB3] 
+      to-[#14A7B8] 
+      bg-clip-text text-transparent">
+  Automation
+    </span>
+  </h1> */}
   <h1 className="text-4xl md:text-7xl font-bold text-black mb-6 leading-tight">
     Bridging Infrastructure <br className="hidden md:block" />
     with Intelligent Automation
   </h1>
 
-  <p className="max-w-3xl text-base md:text-xl text-gray-700 mb-8">
+  <p className="max-w-3xl text-base md:text-xl text-gray-900 font-semibold mb-8">
     Boston Tech India bridges the gap between complex infrastructure and intelligent automation.
     As a product-and-service hybrid, we build scalable web applications and IaaS solutions
     integrated with cutting-edge GenAI — helping organizations scale efficiently while
@@ -189,15 +203,30 @@ function App() {
 
 
 <div>
-  <Bottleneck />
-   <Suit />
-  <Service />
  
-  
+
+<div id="about">
+  <Bottleneck />
+</div>
+
+<div id="product">
+  <Suit />
+</div>
+
+<div id="services">
+  <Service />
+</div>
+
+<div>
   <Partner />
-  
+</div>
+
+<div id="contact">
   <Contact />
-  <Footer />
+</div>
+
+<Footer />
+
 
 </div>
 

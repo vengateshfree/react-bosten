@@ -37,7 +37,25 @@ function Contact() {
 
   return (
     <section className="py-24 px-6 bg-white">
+      <div className="flex justify-center" >
+        <div className="inline-flex items-center gap-3 px-6 py-3 
+      bg-gradient-to-r from-[#0B3C8A]/10 to-[#14A7B8]/10 
+      border border-[#1E5DB3]/20 
+      rounded-full mb-8 backdrop-blur-sm">
+
+    <div className="relative">
+      <div className="w-3 h-3 bg-[#14A7B8] rounded-full animate-pulse"></div>
+      <div className="absolute inset-0 w-3 h-3 bg-[#2EC4C7] rounded-full blur-md opacity-60"></div>
+    </div>
+
+    <span className="text-sm font-semibold tracking-wide text-[#0B3C8A] uppercase">
+    Get In Touch
+    </span>
+  </div>
+  </div>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+        
 
         {/* LEFT SIDE - IMAGE */}
         <div className="relative">
