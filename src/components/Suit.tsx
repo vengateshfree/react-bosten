@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface Pillar {
@@ -192,6 +193,14 @@ function PillarCard({ item, index }: PillarCardProps) {
             />
             {item.benefit}
           </div>
+
+              {/* Learn More Link */}
+              <a href="https://react-bosten.vercel.app/" target="_blank" >
+                           <div className="flex mt-10 justify-center cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600  transition-opacity duration-300">
+                            <span>Contact Us</span>
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          </div>
+                          </a>
         </div>
       </div>
     </div>
