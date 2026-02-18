@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Building2, GraduationCap, TrendingUp } from "lucide-react";
 
 function Partner() {
