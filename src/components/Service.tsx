@@ -140,10 +140,10 @@ function Service() {
                 </p>
 
                 {/* Learn More Link */}
-                <div className="flex cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <a  href="#contact"  className="flex cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span>Contact Us</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </a>
 
                 {/* Decorative Border Accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-600 to-cyan-600 rounded-b-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>

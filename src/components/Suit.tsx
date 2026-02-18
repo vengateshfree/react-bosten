@@ -195,9 +195,9 @@ function PillarCard({ item, index }: PillarCardProps) {
           </div>
 
               {/* Learn More Link */}
-              <a href="https://react-bosten.vercel.app/" target="_blank" >
+              <a href="https://boston-website.onrender.com/" target="_blank" >
                            <div className="flex mt-10 justify-center cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600  transition-opacity duration-300">
-                            <span>Contact Us</span>
+                            <span>Visit Website</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
                           </a>

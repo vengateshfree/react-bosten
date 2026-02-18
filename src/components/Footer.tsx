@@ -1,6 +1,6 @@
 // import React from "react";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "../assets/tlogo.png"; // replace with your logo path
+import logo from "../assets/fulllogo.png"; // replace with your logo path
 
 
 function Footer() {
@@ -12,24 +12,39 @@ function Footer() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Logo" className="w-20 h-20 object-contain" />
-            <span className="text-xl font-bold">Boston Tech <br /> India</span>
+            {/* <span className="text-xl font-bold">Boston Tech <br /> India</span> */}
           </div>
 
           {/* Links */}
           <div className="flex space-x-6">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
-            <a href="/services" className="hover:text-white transition-colors">Services</a>
-            <a href="/about" className="hover:text-white transition-colors">About Us</a>
-            <a href="/contact" className="hover:text-white transition-colors">Contact</a>
-          </div>
+         
+           <a href="#home" className="block">
+        Home
+      </a>
+
+      <a href="#about" className="block">
+        About
+      </a>
+
+      <a href="#services" className="block">
+        Services
+      </a>
+
+      <a href="#product" className="block">
+        Product
+      </a>
+       <a href="#contact" className="block">
+            Contact
+      </a>
+</div>
 
           {/* Social Icons */}
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Twitter size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
             <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-          </div>
+          </div> */}
         </div>
 
         {/* Divider */}
