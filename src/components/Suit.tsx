@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
+import {ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface Pillar {
