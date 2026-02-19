@@ -1,5 +1,5 @@
 // import React from "react";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+// import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import logo from "../assets/fulllogo.png"; // replace with your logo path
 
 
