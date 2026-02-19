@@ -145,7 +145,7 @@ function App() {
       <a
         href="#contact"
         className="ml-4 px-6 py-2 rounded-xl font-semibold text-white 
-        bg-gradient-to-r from-[#1E73BE] to-[#17B6A6] 
+        bg-gradient-to-r from-[#1E73BE] via-[#1E73BE] to-[#17B6A6] 
         hover:scale-105 transition-transform duration-300 shadow-lg"
       >
         Contact

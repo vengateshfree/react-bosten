@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface Pillar {
@@ -138,6 +138,8 @@ function PillarCard({ item, index }: PillarCardProps) {
         transition: `all 0.6s ease ${index * 0.12}s`,
       }}
     >
+      
+     <a href="https://boston-website.onrender.com/" target="_blank" >
       <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
         
         {/* Hover Glow */}
@@ -195,14 +197,15 @@ function PillarCard({ item, index }: PillarCardProps) {
           </div>
 
               {/* Learn More Link */}
-              <a href="https://boston-website.onrender.com/" target="_blank" >
+              {/* <a className="absolute bottom-8 right-5"  href="https://boston-website.onrender.com/" target="_blank" >
                            <div className="flex mt-10 justify-center cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600  transition-opacity duration-300">
                             <span>Visit Website</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </div>
-                          </a>
+                          </a> */}
         </div>
       </div>
+      </a>
     </div>
   );
 }
@@ -237,16 +240,37 @@ export default function Suite() {
         
         {/* Header */}
         <div className="text-center mb-16">
-           <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B3C8A]">
-  Flagship Product {" "}
-    <span className="bg-gradient-to-r 
-      from-[#0B3C8A] 
-      via-[#1E5DB3] 
-      to-[#14A7B8] 
-      bg-clip-text text-transparent">
-   Catalyst Suite
+          
+
+<a 
+  href="https://boston-website.onrender.com/" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group block"
+>
+  <h2 className="flex justify-center items-center gap-3 text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B3C8A] transition-all duration-300 group-hover:text-[#1E5DB3]">
+    
+    <span>
+      Flagship Product{" "}
+      <span className="bg-gradient-to-r 
+        from-[#0B3C8A] 
+        via-[#1E5DB3] 
+        to-[#14A7B8] 
+        bg-clip-text text-transparent 
+        relative"
+      >
+        Catalyst Suite
+     </span>
+     
     </span>
+
+    <ExternalLink
+      size={28}
+      className="opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
+    />
+
   </h2>
+</a>
 
         
 

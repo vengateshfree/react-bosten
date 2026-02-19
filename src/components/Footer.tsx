@@ -1,57 +1,45 @@
-// import React from "react";
-// import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
-import logo from "../assets/fulllogo.png"; // replace with your logo path
-
+import React from "react";
+import logo from "../assets/fulllogo.png";
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-200 pt-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-r from-[#0E4FA3] via-[#1AA0C8] to-[#17B6A6] text-white pt-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img src={logo} alt="Logo" className="w-20 h-20 object-contain" />
-            {/* <span className="text-xl font-bold">Boston Tech <br /> India</span> */}
           </div>
 
-          {/* Links */}
-          <div className="flex space-x-6">
-         
-           <a href="#home" className="block">
-        Home
-      </a>
+          {/* Navigation */}
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
+            <a href="#home" className="hover:text-black transition duration-300">
+              Home
+            </a>
+            <a href="#about" className="hover:text-black transition duration-300">
+              About
+            </a>
+            <a href="#services" className="hover:text-black transition duration-300">
+              Services
+            </a>
+            <a href="#product" className="hover:text-black transition duration-300">
+              Product
+            </a>
+            <a href="#contact" className="hover:text-black transition duration-300">
+              Contact
+            </a>
+          </div>
 
-      <a href="#about" className="block">
-        About
-      </a>
-
-      <a href="#services" className="block">
-        Services
-      </a>
-
-      <a href="#product" className="block">
-        Product
-      </a>
-       <a href="#contact" className="block">
-            Contact
-      </a>
-</div>
-
-          {/* Social Icons */}
-          {/* <div className="flex space-x-4">
-            <a href="#" className="hover:text-white transition-colors"><Facebook size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Twitter size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Instagram size={20} /></a>
-          </div> */}
         </div>
 
         {/* Divider */}
-        <hr className="my-8 border-gray-700" />
+        <div className="mt-10 h-[1px] bg-white/30" />
 
-        {/* Bottom Section */}
-        <div className="text-center text-sm text-gray-500 pb-6">
+        {/* Bottom */}
+        <div className="text-center text-sm text-white/80 py-6">
           © {new Date().getFullYear()} Boston Tech India. All rights reserved.
         </div>
       </div>
