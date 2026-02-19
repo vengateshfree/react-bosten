@@ -209,14 +209,14 @@ function App() {
           bottomColor="#32bdf0"
           intensity={1.1}
           rotationSpeed={1.3}
-          glowAmount={0.010}
-          pillarWidth={4}
+          glowAmount={0.005}
+          pillarWidth={6}
           pillarHeight={0.4}
           noiseIntensity={0}
           pillarRotation={100}
           interactive={false}
           mixBlendMode="luminosity"
-          quality="medium"
+          quality="high"
         />
 
         {/* Content */}
