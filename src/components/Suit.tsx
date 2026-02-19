@@ -248,7 +248,7 @@ export default function Suite() {
   rel="noopener noreferrer"
   className="group block"
 >
-  <h2 className="flex justify-center items-center gap-3 text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B3C8A] transition-all duration-300 group-hover:text-[#1E5DB3]">
+  <h2 className="flex justify-center items-center gap-3 text-4xl md:text-5xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B3C8A] transition-all duration-300 ">
     
     <span>
       Flagship Product{" "}
@@ -264,10 +264,10 @@ export default function Suite() {
      
     </span>
 
-    <ExternalLink
+    {/* <ExternalLink
       size={28}
       className="opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"
-    />
+    /> */}
 
   </h2>
 </a>
