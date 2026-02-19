@@ -83,7 +83,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
+      setScrolled(window.scrollY > 1000);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -97,8 +97,8 @@ function App() {
   <nav
   className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-500 ${
     scrolled
-      ? "bg-white/40 backdrop-blur-md border-white/20"
-      : "bg-white/30 backdrop-blur-md border-white/10"
+      ? "bg-white backdrop-blur-md border-white/20 shadow-lg"
+      : " bg-white/50 backdrop-blur-md border-white/10 "
   }`}
 >
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
