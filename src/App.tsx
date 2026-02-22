@@ -67,7 +67,7 @@
 
 
 import { useEffect, useState } from "react"
-import LightPillar from "./components/LightPillar"
+// import LightPillar from "./components/LightPillar"
 import Bottleneck from "./components/Bottleneck"
 import Partner from "./components/Partner"
 import Service from "./components/Service"
