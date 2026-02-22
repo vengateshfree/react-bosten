@@ -62,7 +62,9 @@ function Contact() {
           <div className="absolute -top-10 -left-10 w-72 h-72 bg-[#1AA0C8] opacity-10 blur-3xl rounded-full"></div>
           
           <img
-            src={contactimg}  // 🔥 replace with your image
+            // src={"https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg"}  
+            // src={contactimg}  
+            src={"https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg"}  
             alt="Contact Boston Tech India"
             className="relative z-10 rounded-3xl shadow-2xl"
           />
