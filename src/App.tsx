@@ -79,7 +79,49 @@ import Contact from "./components/Contact"
 function App() {
   const [open, setOpen] = useState(false)
 
+    // const [scrolled, setScrolled] = useState(false);
+
     const [scrolled, setScrolled] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // background change
+      setScrolled(currentScrollY > 50);
+
+      // hide when scrolling down, show when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNav(false);
+      } else {
+        setShowNav(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // show navbar when mouse near top
+  useEffect(() => {
+    const handleMouseMove = (e: any) => {
+      if (window.scrollY < 50)  return setShowNav(true);
+      if (e.clientY < 50) {
+        setShowNav(true);
+      }
+      else if(e.clientY > 50){        
+        
+        setShowNav(false);
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,13 +136,16 @@ function App() {
     <div id="home" className="min-h-screen w-full overflow-hidden">
 
       {/* Navbar */}
-  <nav
-  className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-500 ${
-    scrolled
-      ? "bg-white backdrop-blur-md border-white/20 shadow-lg"
-      : " bg-white/50 backdrop-blur-md border-white/10 "
-  }`}
->
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 border-b 
+      transition-all duration-500 transform
+      ${showNav ? "translate-y-0" : "-translate-y-full"}
+      ${
+        scrolled
+          ? "bg-white backdrop-blur-md border-white/20 shadow-lg"
+          : "bg-white/50 backdrop-blur-md border-white/10"
+      }`}
+    >
   <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
 
     {/* Logo */}
@@ -113,13 +158,8 @@ function App() {
     </div>
 
     {/* Desktop Menu */}
-    <div className="hidden md:flex items-center gap-8 text-white font-medium">
-{/* 
-            <a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#product">Product</a>
-<a href="#contact">Contact</a> */}
+    <div className="hidden md:flex justify-center items-center gap-8 text-white font-medium">
+
       <a href="#home" className="hover:text-cyan-400 text-[#1E73BE] transition">
         Home
       </a>
@@ -141,7 +181,11 @@ function App() {
         Contact
       </a>
 
+    
+    </div>
+
       {/* Contact Button */}
+        <div className="hidden md:block" >
       <a
         href="#contact"
         className="ml-4 px-6 py-2 rounded-xl font-semibold text-white 
@@ -150,11 +194,11 @@ function App() {
       >
         Contact
       </a>
-    </div>
+      </div>
 
     {/* Mobile Menu Button */}
     <button
-      className="md:hidden text-white text-2xl"
+      className="md:hidden text-blue-600 text-2xl"
       onClick={() => setOpen(!open)}
     >
       ☰
@@ -224,10 +268,11 @@ function App() {
           <button className="px-8 py-4 rounded-2xl bg-[#0E4FA3] text-white hover:bg-[#1E73BE] transition-all duration-300 font-semibold shadow-lg hover:shadow-[#0E4FA3]/30">
             Explore Solutions
           </button>
-
+ <a href="#contact">
           <button className="px-8 py-4 rounded-2xl border border-[#0E4FA3]/30 text-[#0E4FA3] hover:bg-[#0E4FA3]/10 transition-all duration-300 font-semibold">
             Talk to Us
           </button>
+          </a>
 
         </div>
 
