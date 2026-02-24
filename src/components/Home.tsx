@@ -8,6 +8,23 @@ export default function Home() {
     const [scrolled, setScrolled] = useState(false);
     const [showNav, setShowNav] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+
+  const [count, setCount] = useState(200); // particle count
+
+      // Set particle count based on screen size
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth < 1024) {
+        setCount(50); // mobile
+      } else {
+        setCount(200); // desktop
+      }
+    };
+
+    updateCount(); // initial
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
   
     useEffect(() => {
       const handleScroll = () => {
@@ -40,10 +57,10 @@ export default function Home() {
     <>
     <div className="h-screen w-screen absolute inset-0 flex justify-center items-center" >
  <section className="flex flex-col items-center justify-center text-center min-h-screen px-6">
-    <h1 className=" relative text-4xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-[#0E4FA3] to-[#17B6A6] bg-clip-text text-transparent">
+    <h1 className=" relative text-2xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-[#0E4FA3] to-[#17B6A6] bg-clip-text text-transparent">
       Bridging Infrastructure with <br /> Intelligent Automation
     </h1>
-    <p className="text-lg  md:text-xl font-semibold text-gray-600 leading-relaxed mb-10 max-w-3xl">
+    <p className="text-md md:text-xl font-semibold text-gray-600 leading-relaxed mb-10 max-w-3xl">
         Boston Tech India bridges the gap between complex infrastructure and intelligent automation. As a product-and-service hybrid, we build scalable web applications and IaaS solutions integrated with cutting-edge GenAI — helping organizations scale efficiently while significantly lowering total cost of ownership.
     </p>
     <div className="flex flex-col sm:flex-row justify-center gap-5">
@@ -106,7 +123,7 @@ export default function Home() {
       onMouseLeave={() => setMagnetRadius(6)}
     >
       <Antigravity
-        count={200}
+        count={count}
         magnetRadius={magnetRadius} // dynamic
         ringRadius={7}
         waveSpeed={0.4}
