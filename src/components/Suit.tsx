@@ -1,5 +1,5 @@
 // import {ExternalLink } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 interface Pillar {
   icon: React.ReactNode;
@@ -111,7 +111,7 @@ interface PillarCardProps {
 }
 
 function PillarCard({ item, index }: PillarCardProps) {
-  const [visible, setVisible] = useState<boolean>(true);
+  // const [visible, setVisible] = useState<boolean>(true);
   const ref = useRef<HTMLDivElement | null>(null);
 
   // useEffect(() => {
