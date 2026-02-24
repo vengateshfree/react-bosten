@@ -1,5 +1,5 @@
 // import {ExternalLink } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 interface Pillar {
   icon: React.ReactNode;
@@ -133,8 +133,8 @@ function PillarCard({ item, index }: PillarCardProps) {
     <div
       ref={ref}
       style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(30px)",
+        opacity: true ? 1 : 0,
+        transform: true ? "translateY(0)" : "translateY(30px)",
         transition: `all 0.6s ease ${index * 0.12}s`,
       }}
     >
