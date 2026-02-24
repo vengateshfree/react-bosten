@@ -109,10 +109,6 @@ const styles = {
     left: 0,
     zIndex: 10,
   },
-  logo: {
-    fontSize: "60px",
-    marginBottom: "10px",
-  },
-};
+} as const;
 
 export default App;
