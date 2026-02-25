@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Bottleneck from "./components/Bottleneck";
 import Suit from "./components/Suit";
 import Service from "./components/Service";

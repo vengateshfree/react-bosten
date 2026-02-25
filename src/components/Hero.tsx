@@ -1,11 +1,11 @@
 import { useEffect, useState, useCallback } from "react";
-import logo from "../assets/fulllogo.png";
+// import logo from "../assets/fulllogo.png";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 function Hero() {
-  const [lastScrollY, setLastScrollY] = useState(0);
+  // const [lastScrollY, setLastScrollY] = useState(0);
   const [init, setInit] = useState(false);
   const [particleCount, setParticleCount] = useState(150);
 
