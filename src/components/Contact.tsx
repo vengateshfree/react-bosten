@@ -4,7 +4,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
+    phone: "",
     message: "",
   });
 
@@ -27,7 +27,7 @@ function Contact() {
       });
 
       setSuccess(true);
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error(error);
     }
@@ -112,15 +112,17 @@ function Contact() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E73BE]"
                 />
-
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="Company Name"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E73BE]"
-                />
+<input
+  type="text"
+  name="phone"
+  placeholder="Phone Number"
+  value={formData.phone}
+  onChange={(e) => {
+    const value = e.target.value.replace(/[^0-9]/g, ""); // remove non-numbers
+    setFormData({ ...formData, phone: value });
+  }}
+  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1E73BE]"
+/>
 
                 <textarea
                   name="message"

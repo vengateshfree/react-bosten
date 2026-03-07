@@ -139,7 +139,7 @@ function PillarCard({ item, index }: PillarCardProps) {
       }}
     >
       
-     <a href="https://boston-website.onrender.com/" target="_blank" >
+     <a href="https://catalystsuite.bostontechindia.in/" target="_blank" >
       <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
         
         {/* Hover Glow */}
@@ -197,7 +197,7 @@ function PillarCard({ item, index }: PillarCardProps) {
           </div>
 
               {/* Learn More Link */}
-              {/* <a className="absolute bottom-8 right-5"  href="https://boston-website.onrender.com/" target="_blank" >
+              {/* <a className="absolute bottom-8 right-5"  href="https://catalystsuite.bostontechindia.in/" target="_blank" >
                            <div className="flex mt-10 justify-center cursor-pointer items-center gap-2 text-sm font-medium text-cyan-600  transition-opacity duration-300">
                             <span>Visit Website</span>
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -243,7 +243,7 @@ export default function Suite() {
           
 
 <a 
-  href="https://boston-website.onrender.com/" 
+  href="https://catalystsuite.bostontechindia.in/" 
   target="_blank"
   rel="noopener noreferrer"
   className="group block"
