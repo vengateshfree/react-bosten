@@ -71,14 +71,14 @@ function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#1AA0C8]" />
                 <p className="text-gray-400">
-                  contact@bostontechindia.com
+                 info@bostontechindia.in
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#1AA0C8]" />
                 <p className="text-gray-400">
-                  +91 98765 43210
+                  +91 8508589815
                 </p>
               </div>
 
