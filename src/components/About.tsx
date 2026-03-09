@@ -65,10 +65,11 @@ function About() {
 
           </div>
 
-          <button className="px-7 py-3 bg-[#0E4FA3] text-white rounded-xl font-semibold hover:bg-[#1E73BE] transition">
+          <a href="#services">
+          <button className="px-7 py-3 cursor-pointer bg-[#0E4FA3] text-white rounded-xl font-semibold hover:bg-[#1E73BE] transition">
             Learn More
           </button>
-
+</a>
         </div>
 
       </div>
