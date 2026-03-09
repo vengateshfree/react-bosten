@@ -1,4 +1,5 @@
 import  { useState } from "react";
+import girlphone from "../assets/girlphone.jpeg"
 // import contactimg from "../assets/contactimg.png"
 function Contact() {
   const [formData, setFormData] = useState({
@@ -64,7 +65,7 @@ function Contact() {
           <img
             // src={"https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg"}  
             // src={contactimg}  
-            src={"https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg"}  
+            src={girlphone}  
             alt="Contact Boston Tech India"
             className="relative z-10 rounded-3xl shadow-2xl"
           />

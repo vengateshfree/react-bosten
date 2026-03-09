@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import logo from "./assets/fulllogo.png";
 import Hero from "./components/Hero";
 import Nabar from "./components/Nabar";
+import About from "./components/About";
 
 // #0E4FA3	
 
@@ -68,14 +69,21 @@ useEffect(() => {
         >
           <Nabar />
           <div className="flex flex-col overflow-x-hidden w-screen">
+            
+                    <div id="home">
             <Hero />
-
+</div>
             {
               li && ( 
                 <>
                     <div id="about">
+                      
+            <About />
+            </div>
+                <div id="solutions">
               <Bottleneck />
             </div>
+
 
             <div id="product">
               <Suit />
@@ -89,7 +97,7 @@ useEffect(() => {
               <Partner />
             </div>
 
-            <div id="contact" className="overflow-hidden" >
+            <div id="contact" className="" >
               <Contact />
             </div>
 
