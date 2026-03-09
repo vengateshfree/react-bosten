@@ -10,6 +10,58 @@ interface Pillar {
   benefit: string;
 }
 
+const pillars2: Pillar[] = [
+  {
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <path d="M4 7l8-4 8 4-8 4-8-4z" />
+        <path d="M4 12l8 4 8-4" />
+        <path d="M4 17l8 4 8-4" />
+      </svg>
+    ),
+    accent: "#1E73BE",
+    number: "01",
+    title: "Academic",
+    capability:
+      "Purpose-built for universities, research labs, and educational institutions to manage campus IT infrastructure efficiently.",
+    benefit:
+      "Enable students, researchers, and faculty to access reliable infrastructure for innovation and learning.",
+  },
+  {
+    icon: (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-6 h-6"
+      >
+        <rect x="3" y="3" width="7" height="7" />
+        <rect x="14" y="3" width="7" height="7" />
+        <rect x="14" y="14" width="7" height="7" />
+        <rect x="3" y="14" width="7" height="7" />
+      </svg>
+    ),
+    accent: "#0EA5A4",
+    number: "02",
+    title: "Enterprise",
+    capability:
+      "Designed for large enterprises managing multi-cloud, DevOps pipelines, and distributed infrastructure environments.",
+    benefit:
+      "Deliver scalable observability and automation across hybrid and cloud-native systems.",
+  },
+];
+
 const pillars: Pillar[] = [
   {
     icon: (
@@ -210,6 +262,110 @@ function PillarCard({ item, index }: PillarCardProps) {
   );
 }
 
+function PillarCard2({ item, index }: PillarCardProps) {
+  // const [visible, setVisible] = useState<boolean>(true);
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.isIntersecting) {
+  //         setVisible(true);
+  //       }
+  //     },
+  //     { threshold: 0.15 }
+  //   );
+
+  //   if (ref.current) observer.observe(ref.current);
+
+  //   return () => observer.disconnect();
+  // }, []);
+
+  return (
+  <div
+  ref={ref}
+  style={{
+    opacity: true ? 1 : 0,
+    transform: true ? "translateY(0)" : "translateY(30px)",
+    transition: `all 0.6s ease ${index * 0.12}s`,
+  }}
+>
+  <a href="https://catalystsuite.bostontechindia.in/" target="_blank">
+    <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        
+      {/* Top Gradient Accent */}
+      <div
+        className="absolute top-0 left-0 w-full h-1"
+        style={{
+          // background: `linear-gradient(90deg, ${item.accent}, transparent)`,
+        }}
+      />
+
+      <div className="p-7">
+
+        {/* Icon + Title */}
+        <div className="flex items-center gap-4 mb-5">
+
+          <div
+            className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+            style={{
+              background: `${item.accent}15`,
+              border: `1px solid ${item.accent}40`,
+              color: item.accent,
+            }}
+          >
+            {item.icon}
+          </div>
+
+          <h3 className="text-lg font-semibold text-[#1E5DB3] transition-colors">
+            {item.title}
+          </h3>
+
+        </div>
+
+        {/* Description */}
+        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+          {item.capability}
+        </p>
+
+        {/* Benefit Tag */}
+        <div
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium mb-6"
+          style={{
+            background: `${item.accent}12`,
+            border: `1px solid ${item.accent}30`,
+            color: item.accent,
+          }}
+        >
+          <span
+            className="w-1.5 h-1.5 rounded-full"
+            style={{ background: item.accent }}
+          />
+          {item.benefit}
+        </div>
+
+        {/* CTA */}
+        <div className="flex items-center gap-2 text-sm font-medium text-cyan-600 group-hover:text-cyan-700 transition-colors">
+          <span>Visit Website</span>
+
+          <svg
+            className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </a>
+</div>
+  );
+}
+
 export default function Suite() {
   return (
     <section className="relative py-24 px-6 bg-sky-50 overflow-hidden">
@@ -283,9 +439,26 @@ export default function Suite() {
             infrastructure management into a seamless, one-touch experience.
           </p>
         </div>
+         <div className="grid md:grid-cols-2 gap-6">
+          {pillars2.map((item, index) => (
+            <PillarCard2 key={index} item={item} index={index} />
+          ))}
+        </div>
+
+        <div className="flex items-center justify-center pt-15 pb-5">
+  <div className="w-24 h-[2px] bg-gray-300"></div>
+
+  {/* from-[#1E5DB3] to-[#2EC4C7] */}
+
+  <span className="px-6 text-sm font-semibold text-[#2EC4C7] tracking-wider">
+    PLATFORM CAPABILITIES
+  </span>
+
+  <div className="w-24 h-[2px] bg-gray-300"></div>
+</div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 mt-10">
           {pillars.map((item, index) => (
             <PillarCard key={index} item={item} index={index} />
           ))}

@@ -33,7 +33,7 @@ useEffect(() => {
 
   const timer = setTimeout(() => {
     setLi(true);
-  }, 800);
+  }, 0);
 
   return () => clearTimeout(timer); // cleanup function
 }, [showWebsite]);
@@ -55,6 +55,7 @@ useEffect(() => {
             <img className="h-60 w-60" src={logo} alt="" />
           
           </motion.div>
+         
         )}
       </AnimatePresence>
 
