@@ -2,8 +2,6 @@
 import {
   Server,
   Code2,
-  Brain,
-  Cloud,
   RefreshCw,
   Network,
   GraduationCap,
