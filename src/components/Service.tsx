@@ -6,25 +6,12 @@ import {
   Network,
   GraduationCap,
   ArrowRight,
+  ShieldCheck,
+  Code,
+  GitBranch,
 } from "lucide-react";
 
-function Service() {
-  const services = [
-    {
-      title: "Data Centre Infrastructure",
-      desc: "Design and management of robust, scalable physical and virtual environments.",
-      icon: Server,
-       gradient: "from-cyan-50 to-blue-50",
-      iconColor: "text-cyan-600",
-    },
-    {
-      title: "Next Gen Application Development",
-      desc: "Building modern, high-performance web and software applications.",
-      icon: Code2,
-       gradient: "from-cyan-50 to-blue-50",
-      iconColor: "text-cyan-600",
-    },
-    // {
+  // {
     //   title: "AI & GenAI Application Development",
     //   desc: "Integrating cutting-edge artificial intelligence to create intelligent, automated workflows.",
     //   icon: Brain,
@@ -38,29 +25,67 @@ function Service() {
     //    gradient: "from-cyan-50 to-blue-50",
     //   iconColor: "text-cyan-600",
     // },
-    {
-      title: "Hybrid Cloud Migration",
-      desc: "Expert guidance in migrating workloads from public cloud environments to secure hybrid cloud architectures.",
-      icon: RefreshCw,
-       gradient: "from-cyan-50 to-blue-50",
-      iconColor: "text-cyan-600",
-    },
-    {
-      title: "Network Management",
-      desc: "End-to-end oversight of network performance, security, and connectivity.",
-      icon: Network,
-       gradient: "from-cyan-50 to-blue-50",
-      iconColor: "text-cyan-600",
-    },
-    {
-      title: "Training & Collaboration",
-      desc: "Empowering your teams through technical training and collaborative development models.",
-      icon: GraduationCap,
-       gradient: "from-cyan-50 to-blue-50",
-      iconColor: "text-cyan-600",
-    },
-  ];
+function Service() {
+ const services = [
+  {
+    title: "Data Centre Infrastructure",
+    desc: "Design and management of robust, scalable physical and virtual environments.",
+    icon: Server,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "Next Gen Application Development",
+    desc: "Building modern, high-performance web and software applications.",
+    icon: Code2,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "Hybrid Cloud Migration",
+    desc: "Expert guidance in migrating workloads from public cloud environments to secure hybrid cloud architectures.",
+    icon: RefreshCw,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "Network Management",
+    desc: "End-to-end oversight of network performance, security, and connectivity.",
+    icon: Network,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "Training & Collaboration",
+    desc: "Empowering your teams through technical training and collaborative development models.",
+    icon: GraduationCap,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
 
+  // New Services
+  {
+    title: "Managed Services (L1 & L2)",
+    desc: "24/7 infrastructure monitoring, incident management, and operational support through Level 1 and Level 2 managed services.",
+    icon: ShieldCheck,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "Application Development",
+    desc: "Custom enterprise application development focused on scalability, performance, and business efficiency.",
+    icon: Code,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+  {
+    title: "DevOps (Traditional & Next Gen)",
+    desc: "CI/CD automation, containerization, and infrastructure-as-code practices enabling faster and more reliable deployments.",
+    icon: GitBranch,
+    gradient: "from-cyan-50 to-blue-50",
+    iconColor: "text-cyan-600",
+  },
+];
   return (
     <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">

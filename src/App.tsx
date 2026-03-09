@@ -33,7 +33,7 @@ useEffect(() => {
 
   const timer = setTimeout(() => {
     setLi(true);
-  }, 0);
+  }, 100);
 
   return () => clearTimeout(timer); // cleanup function
 }, [showWebsite]);
