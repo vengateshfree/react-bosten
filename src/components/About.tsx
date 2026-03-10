@@ -10,7 +10,8 @@ function About() {
         {/* Left Image */}
         <div className="relative">
           <img
-            src={aboutImg}
+            // src={aboutImg}
+            src={"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"}
             alt="Boston Tech India Infrastructure"
             className="rounded-3xl shadow-xl"
           />

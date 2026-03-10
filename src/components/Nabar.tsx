@@ -46,8 +46,8 @@ function Nabar() {
           </div>
           <div className="hidden md:flex justify-center items-center gap-8 text-white font-medium">
             <a href="#home" className="hover:text-cyan-400 text-[#1E73BE] transition">Home</a>
-            <a href="#about" className="hover:text-cyan-400 text-[#1E73BE] transition">About</a>
-            <a href="#solutions" className="hover:text-cyan-400 text-[#1E73BE] transition">Solutions</a>
+            <a href="#about" className="hover:text-cyan-400 text-[#1E73BE] transition"> About Us</a>
+            {/* <a href="#solutions" className="hover:text-cyan-400 text-[#1E73BE] transition">Solutions</a> */}
             <a href="#product" className="hover:text-cyan-400 text-[#1E73BE] transition">Product</a>
             <a href="#services" className="hover:text-cyan-400 text-[#1E73BE] transition">Services</a>
             <a href="#contact" className="hover:text-cyan-400 text-[#1E73BE] transition">Contact</a>

@@ -94,7 +94,8 @@ function Hero() {
             },
             detectRetina: true,
           }}
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 "
+          
         />
       )}
 
@@ -107,9 +108,12 @@ function Hero() {
         Boston Tech India bridges the gap between complex infrastructure and intelligent automation. As a product-and-service hybrid, we build scalable web applications and IaaS solutions integrated with cutting-edge GenAI — helping organizations scale efficiently while significantly lowering total cost of ownership.
     </p>
         <div className="flex flex-col sm:flex-row justify-center gap-5">
+       
+          <a href="#product">
           <button className="px-8 cursor-pointer py-4 rounded-2xl bg-[#0E4FA3] text-white hover:bg-[#1E73BE] transition-all duration-300 font-semibold shadow-lg hover:shadow-[#0E4FA3]/30">
-            Explore Solutions
+            Explore Products
           </button>
+          </a>
           <a href="#contact">
             <button className="px-8 py-4 cursor-pointer rounded-2xl border border-[#0E4FA3]/30 text-[#0E4FA3] hover:bg-[#0E4FA3]/10 transition-all duration-300 font-semibold">
               Talk to Us
