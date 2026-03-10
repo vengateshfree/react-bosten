@@ -111,21 +111,21 @@
     );
   }
 
-  const styles = {
-    logoSection: {
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      background: "#ffffff",
-      position: "fixed",
-      width: "100%",
-      top: 0,
-      left: 0,
-      zIndex: 10,
-    },
-  };
+  // const styles = {
+  //   logoSection: {
+  //     height: "100vh",
+  //     display: "flex",
+  //     flexDirection: "column",
+  //     justifyContent: "center",
+  //     alignItems: "center",
+  //     background: "#ffffff",
+  //     position: "fixed",
+  //     width: "100%",
+  //     top: 0,
+  //     left: 0,
+  //     zIndex: 10,
+  //   },
+  // };
 
   export default App;
 

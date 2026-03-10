@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import girlphone from "../assets/girlphone.jpeg"
+// import girlphone from "../assets/girlphone.jpeg"
 // import contactimg from "../assets/contactimg.png"
 function Contact() {
   const [formData, setFormData] = useState({

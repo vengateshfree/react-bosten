@@ -1,4 +1,4 @@
-import aboutImg from "../assets/aboutimg.png";
+// import aboutImg from "../assets/aboutimg.png";
 import { Zap, LayoutDashboard, ShieldCheck, ClipboardCheck } from "lucide-react";
 
 
