@@ -1,5 +1,6 @@
 import aboutImg from "../assets/aboutimg.png";
-import { Cloud, Cpu, Bot, Settings } from "lucide-react";
+import { Zap, LayoutDashboard, ShieldCheck, ClipboardCheck } from "lucide-react";
+
 
 function About() {
   return (
@@ -31,36 +32,42 @@ function About() {
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             Boston Tech India helps organizations simplify complex
             infrastructure through intelligent automation, cloud
-            platforms, and modern application development.
+            platforms, and modern application development.   Our team of <span className="font-semibold text-[#0E4FA3]"> 10 technology professionals </span>
+            builds scalable infrastructure, DevOps systems, and AI-powered
+            platforms that enable enterprises and institutions to innovate faster.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Our team of <span className="font-semibold text-[#0E4FA3]">10 technology professionals</span>
-            builds scalable infrastructure, DevOps systems, and AI-powered
-            platforms that enable enterprises and institutions to innovate faster.
+          
           </p>
 
           {/* Features */}
           <div className="grid grid-cols-2 gap-6 mb-8">
 
             <div className="flex items-center gap-3">
-              <Cloud className="text-[#0E4FA3]" size={22} />
-              <span className="text-gray-700 font-medium">Cloud Infrastructure</span>
+
+    <Zap className="text-[#0E4FA3]" size={22} />
+              <span className="text-gray-700 font-medium">One-Touch Provisioning</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Cpu className="text-[#0E4FA3]" size={22} />
-              <span className="text-gray-700 font-medium">Automation</span>
+              {/* <Cpu className="text-[#0E4FA3]" size={22} /> */}
+
+    <LayoutDashboard className="text-[#0E4FA3]" size={22} />
+              <span className="text-gray-700 font-medium">One-Dashboard Monitoring</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Bot className="text-[#0E4FA3]" size={22} />
-              <span className="text-gray-700 font-medium">AI Integration</span>
+
+    <ShieldCheck className="text-[#0E4FA3]" size={22} />
+              <span className="text-gray-700 font-medium">Access Level Control</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Settings className="text-[#0E4FA3]" size={22} />
-              <span className="text-gray-700 font-medium">DevOps Systems</span>
+              {/* <Settings className="text-[#0E4FA3]" size={22} /> */}
+
+    <ClipboardCheck className="text-[#0E4FA3]" size={22} />
+              <span className="text-gray-700 font-medium">Compliance Automation</span>
             </div>
 
           </div>
