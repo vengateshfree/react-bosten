@@ -4,7 +4,7 @@ import { Zap, LayoutDashboard, ShieldCheck, ClipboardCheck } from "lucide-react"
 
 function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-white">
+    <section id="about" className="min-h-screen flex items-center bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* Left Image */}

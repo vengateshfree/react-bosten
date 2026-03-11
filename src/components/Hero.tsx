@@ -48,6 +48,7 @@ function Hero() {
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={{
+            fullScreen: { enable: false },
             fpsLimit: 120,
             interactivity: {
               events: {
