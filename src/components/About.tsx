@@ -1,4 +1,4 @@
-// import aboutImg from "../assets/aboutimg.png";
+import aboutImg from "../assets/aboutimg.png";
 import { Zap, LayoutDashboard, ShieldCheck, ClipboardCheck } from "lucide-react";
 
 
@@ -10,8 +10,8 @@ function About() {
         {/* Left Image */}
         <div className="relative">
           <img
-            // src={aboutImg}
-            src={"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"}
+            src={aboutImg}
+            // src={"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"}
             alt="Boston Tech India Infrastructure"
             className="rounded-3xl shadow-xl"
           />
