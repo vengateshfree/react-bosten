@@ -70,7 +70,7 @@
           >
             <Nabar />
 
-            <div className="flex flex-col overflow-x-hidden w-screen">
+            <div className="">
               <div id="home">
                 <Hero />
               </div>

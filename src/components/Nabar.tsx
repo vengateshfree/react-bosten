@@ -40,7 +40,7 @@ function Nabar() {
         ${showNav ? "translate-y-0" : "-translate-y-full"}
         ${scrolled ? "bg-white backdrop-blur-md border-white/20 shadow-lg" : "bg-white/50 backdrop-blur-md border-white/10"}`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+        <div className="max-w-7xl   mx-auto px-6 py-2 flex justify-between items-center">
           <div className="flex items-center space-x-3 text-white">
             <img src={logo} alt="Logo" className="w-14 h-14 object-contain" />
           </div>
