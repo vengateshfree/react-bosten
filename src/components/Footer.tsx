@@ -1,4 +1,4 @@
-import logo from "../assets/fulllogo.png";
+// import logo from "../assets/fulllogo.png";
 
 import {
   Mail,
