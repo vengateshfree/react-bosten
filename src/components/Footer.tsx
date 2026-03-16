@@ -1,100 +1,133 @@
 import logo from "../assets/fulllogo.png";
-import { Mail, Phone, MapPin } from "lucide-react";
+
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-[#0B1E3C] text-gray-300 pt-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
-        {/* Main Grid */}
-        <div className="grid md:grid-cols-3 gap-12">
+    <footer className="relative bg-gradient-to-br from-[#020617] via-[#0B1E3C] to-[#020617] text-gray-300 pt-20 pb-10 overflow-hidden">
 
-          {/* Company Info */}
-          <div>
-            <img src={logo} alt="Boston Tech India Logo" className="w-24 mb-6" />
-            <p className="text-sm leading-relaxed text-gray-400">
-              Boston Tech India delivers intelligent automation and 
-              infrastructure solutions designed for modern enterprises. 
-              We empower organizations with scalable, secure, and 
-              future-ready technology platforms.
-            </p>
+      {/* glow background */}
+      <div className="absolute w-96 h-96 bg-cyan-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
+      <div className="absolute w-96 h-96 bg-blue-500/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
+
+      <div className="relative max-w-6xl mx-auto px-6">
+
+        {/* Logo + Tagline */}
+        {/* <div className="flex flex-col items-center text-center mb-12">
+
+          <div className="relative inline-block">
+
+            <div className="absolute inset-0 bg-white/20 blur-2xl rounded-full"></div>
+
+            <img
+              src={logo}
+              alt="Boston Tech India"
+              className="relative w-40 mb-4"
+            />
+
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-6">
-              Quick Links
-            </h3>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#home" className="hover:text-[#1AA0C8] transition">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-[#1AA0C8] transition">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-[#1AA0C8] transition">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#product" className="hover:text-[#1AA0C8] transition">
-                  Product
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-[#1AA0C8] transition">
-                  Contact
-                </a>
-              </li>
-            </ul>
+          <p className="text-gray-400 text-sm max-w-md">
+            We build modern software, websites, and digital products
+            for businesses worldwide.
+          </p>
+
+        </div> */}
+
+
+        {/* Menu */}
+        <ul className="flex flex-wrap justify-center gap-8 text-sm font-medium mb-10">
+
+          <li>
+            <a href="#home" className="hover:text-cyan-400 transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="#about" className="hover:text-cyan-400 transition">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="#services" className="hover:text-cyan-400 transition">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="#product" className="hover:text-cyan-400 transition">
+              Product
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" className="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+
+        {/* Contact */}
+        <div className="flex flex-col md:flex-row justify-center gap-8 text-sm text-gray-400 mb-12">
+
+          <div className="flex items-center gap-3">
+            <MapPin className="text-cyan-400 w-5 h-5" />
+            Salem, Tamil Nadu
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-6">
-              Contact Information
-            </h3>
-            <div className="space-y-4 text-sm">
+          <div className="flex items-center gap-3">
+            <Mail className="text-cyan-400 w-5 h-5" />
+            info@bostontechindia.in
+          </div>
 
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#1AA0C8] mt-1" />
-                <p className="text-gray-400">
-                  Salem, Tamil Nadu, India
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#1AA0C8]" />
-                <p className="text-gray-400">
-                 info@bostontechindia.in
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#1AA0C8]" />
-                <p className="text-gray-400">
-                  +91 8508589815
-                </p>
-              </div>
-
-            </div>
+          <div className="flex items-center gap-3">
+            <Phone className="text-cyan-400 w-5 h-5" />
+            +91 8508589815
           </div>
 
         </div>
+
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-5 mb-10">
+
+          <div className="p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 transition cursor-pointer">
+            <Facebook size={18} />
+          </div>
+
+          <div className="p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 transition cursor-pointer">
+            <Instagram size={18} />
+          </div>
+
+          <div className="p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 transition cursor-pointer">
+            <Linkedin size={18} />
+          </div>
+
+        </div>
+
 
         {/* Divider */}
-        <div className="mt-12 border-t border-white/10" />
+        <div className="border-t border-white/10 mb-6"></div>
 
-        {/* Bottom Bar */}
-        <div className="py-6 text-center text-sm text-gray-500">
+
+        {/* Bottom */}
+        <div className="text-center text-sm text-gray-500">
           © {new Date().getFullYear()} Boston Tech India. All rights reserved.
         </div>
+
       </div>
+
     </footer>
   );
 }

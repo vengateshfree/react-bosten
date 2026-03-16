@@ -1,5 +1,7 @@
 // import {ExternalLink } from "lucide-react";
 import { useRef } from "react";
+import acascreen from "../assets/acascreen.png";
+import enterscreen from "../assets/enterscreen.png";
 
 interface Pillar {
   icon: React.ReactNode;
@@ -9,6 +11,7 @@ interface Pillar {
   capability: string;
   benefit: string;
   link: string;
+  preview?: any;
 }
 
 const pillars2: Pillar[] = [
@@ -35,6 +38,7 @@ const pillars2: Pillar[] = [
     capability:
       "Purpose-built for universities, research labs, and educational institutions to manage campus IT infrastructure efficiently.",
     benefit:  "Enable students, researchers, and faculty to access reliable infrastructure for innovation and learning.",
+    preview: acascreen,
      
   },
   {
@@ -62,6 +66,7 @@ const pillars2: Pillar[] = [
       "Designed for large enterprises managing multi-cloud, DevOps pipelines, and distributed infrastructure environments.",
     benefit:
       "Deliver scalable observability and automation across hybrid and cloud-native systems.",
+      preview: enterscreen,
   },
 ];
 
@@ -270,106 +275,88 @@ function PillarCard({ item, index }: PillarCardProps) {
 }
 
 function PillarCard2({ item, index }: PillarCardProps) {
-  // const [visible, setVisible] = useState<boolean>(true);
   const ref = useRef<HTMLDivElement | null>(null);
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.isIntersecting) {
-  //         setVisible(true);
-  //       }
-  //     },
-  //     { threshold: 0.15 }
-  //   );
-
-  //   if (ref.current) observer.observe(ref.current);
-
-  //   return () => observer.disconnect();
-  // }, []);
-
   return (
-  <div
-  ref={ref}
-  style={{
-    opacity: true ? 1 : 0,
-    transform: true ? "translateY(0)" : "translateY(30px)",
-    transition: `all 0.6s ease ${index * 0.12}s`,
-  }}
->
-  <a href={item.link} target="_blank" rel="noopener noreferrer">
-    <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
-        
-      {/* Top Gradient Accent */}
-      <div
-        className="absolute top-0 left-0 w-full h-1"
-        style={{
-          // background: `linear-gradient(90deg, ${item.accent}, transparent)`,
-        }}
-      />
+    <div
+      ref={ref}
+      style={{
+        opacity: 1,
+        transform: "translateY(0)",
+        transition: `all 0.6s ease ${index * 0.12}s`,
+      }}
+    >
+      <a href={item.link} target="_blank" rel="noopener noreferrer">
+        <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
 
-      <div className="p-7">
+          {/* NORMAL CONTENT */}
+          <div className="p-7 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
 
-        {/* Icon + Title */}
-        <div className="flex items-center gap-4 mb-5">
+            <div className="flex items-center gap-4 mb-5">
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center"
+                style={{
+                  background: `${item.accent}15`,
+                  border: `1px solid ${item.accent}40`,
+                  color: item.accent,
+                }}
+              >
+                {item.icon}
+              </div>
 
-          <div
-            className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
-            style={{
-              background: `${item.accent}15`,
-              border: `1px solid ${item.accent}40`,
-              color: item.accent,
-            }}
-          >
-            {item.icon}
+              <h3 className="text-lg font-semibold text-[#1E5DB3]">
+                {item.title}
+              </h3>
+            </div>
+
+            <p className="text-gray-600 text-sm mb-6">
+              {item.capability}
+            </p>
+
+            <div
+              className="inline-flex px-3 py-1.5 rounded-lg text-xs font-medium"
+              style={{
+                background: `${item.accent}12`,
+                border: `1px solid ${item.accent}30`,
+                color: item.accent,
+              }}
+            >
+              {item.benefit}
+            </div>
+
           </div>
 
-          <h3 className="text-lg font-semibold text-[#1E5DB3] transition-colors">
-            {item.title}
-          </h3>
+
+          {/* HOVER IMAGE */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+
+            {/* image with zoom */}
+            <img
+              src={item.preview}
+              className="w-full h-full  scale-110 group-hover:scale-100 transition-transform duration-500"
+            />
+
+            {/* gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+            {/* text */}
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white translate-y-6 group-hover:translate-y-0 transition-all duration-500">
+
+              <h3 className="text-lg font-semibold">
+                {item.title}
+              </h3>
+
+              <p className="text-sm opacity-90">
+                Visit Website →
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
-
-        {/* Description */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-6">
-          {item.capability}
-        </p>
-
-        {/* Benefit Tag */}
-        <div
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium mb-6"
-          style={{
-            background: `${item.accent}12`,
-            border: `1px solid ${item.accent}30`,
-            color: item.accent,
-          }}
-        >
-          <span
-            className="w-1.5 h-1.5 rounded-full"
-            style={{ background: item.accent }}
-          />
-          {item.benefit}
-        </div>
-
-        {/* CTA */}
-        <div className="flex items-center gap-2 text-sm font-medium text-cyan-600 group-hover:text-cyan-700 transition-colors">
-          <span>Visit Website</span>
-
-          <svg
-            className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </div>
-
-      </div>
+      </a>
     </div>
-  </a>
-</div>
   );
 }
 
