@@ -123,6 +123,7 @@ function Contact() {
   name="phone"
   placeholder="Phone Number"
   value={formData.phone}
+  required
   onChange={(e) => {
     const value = e.target.value.replace(/[^0-9]/g, ""); // remove non-numbers
     setFormData({ ...formData, phone: value });
