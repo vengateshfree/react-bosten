@@ -21,10 +21,14 @@ function Contact() {
     setLoading(true);
 
     try {
-      await fetch("YOUR_API_ENDPOINT", {
+      await fetch("https://bostontechindia.in/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+          body: JSON.stringify({
+        ...formData,
+        
+        datafrom: "Boston Main Website",   // ✅ added here
+      }),
       });
 
       setSuccess(true);

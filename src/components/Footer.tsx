@@ -4,14 +4,14 @@ import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  Instagram,
-  Linkedin,
+  // Facebook,
+  // Instagram,
+  // Linkedin,
 } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-[#020617] via-[#0B1E3C] to-[#020617] text-gray-300 pt-20 pb-10 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[#020617] via-[#0B1E3C] to-[#020617] text-gray-300 pt-14 pb-7 overflow-hidden">
 
       {/* glow background */}
       <div className="absolute w-96 h-96 bg-cyan-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
@@ -43,7 +43,7 @@ function Footer() {
 
 
         {/* Menu */}
-        <ul className="flex flex-wrap justify-center gap-8 text-sm font-medium mb-10">
+        <ul className="flex flex-wrap justify-center gap-8 text-sm font-medium mb-8">
 
           <li>
             <a href="#home" className="hover:text-cyan-400 transition">
@@ -79,7 +79,7 @@ function Footer() {
 
 
         {/* Contact */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 text-sm text-gray-400 mb-12">
+        <div className="flex flex-col md:flex-row justify-center gap-8 text-sm text-gray-400 mb-6">
 
           <div className="flex items-center gap-3">
             <MapPin className="text-cyan-400 w-5 h-5" />
@@ -100,7 +100,7 @@ function Footer() {
 
 
         {/* Social Icons */}
-        <div className="flex justify-center gap-5 mb-10">
+        {/* <div className="flex justify-center gap-5 mb-10">
 
           <div className="p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 transition cursor-pointer">
             <Facebook size={18} />
@@ -114,11 +114,11 @@ function Footer() {
             <Linkedin size={18} />
           </div>
 
-        </div>
+        </div> */}
 
 
         {/* Divider */}
-        <div className="border-t border-white/10 mb-6"></div>
+        <div className="border-t border-white/10 mb-3"></div>
 
 
         {/* Bottom */}

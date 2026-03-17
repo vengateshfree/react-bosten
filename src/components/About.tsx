@@ -4,7 +4,7 @@ import { Zap, LayoutDashboard, ShieldCheck, ClipboardCheck } from "lucide-react"
 
 function About() {
   return (
-    <section id="about" className="min-h-screen flex items-center bg-white">
+    <section id="about" className="min-h-screen flex items-center bg-white ">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* Left Image */}
@@ -32,10 +32,11 @@ function About() {
 
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             Boston Tech India helps organizations simplify complex
-            infrastructure through intelligent automation, cloud
-            platforms, and modern application development.   Our team of <span className="font-semibold text-[#0E4FA3]"> 10 technology professionals </span>
-            builds scalable infrastructure, DevOps systems, and AI-powered
-            platforms that enable enterprises and institutions to innovate faster.
+            infrastructure through intelligent automation,
+            <span className="font-semibold text-[#0E4FA3]"> cloud
+            platforms, and modern application development</span>.   Our team of  technology professionals 
+            builds  <span className="font-semibold text-[#0E4FA3]"> scalable infrastructure, DevOps systems, and AI-powered
+            platforms </span> that enable enterprises and institutions to innovate faster.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">

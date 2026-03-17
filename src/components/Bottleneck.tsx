@@ -55,7 +55,7 @@ function Bottleneck() {
       glowGradient: "from-rose-500 to-orange-400",
       icon: ShieldCheck
     }
-  ];
+  ]; 
 
   return (
     <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
@@ -115,7 +115,8 @@ infrastructure. Teams often waste countless hours on repetitive, manual tasks:
             return (
               <div
                 key={item.id}
-                className={`group relative bg-white border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-2xl ${item.hoverBorder} transition-all duration-500 overflow-hidden`}
+                // className={`group relative bg-white border border-gray-200 p-8 rounded-3xl shadow-sm hover:shadow-2xl  transition-all duration-500 overflow-hidden ${item.hoverBorder}`}
+                className={`group relative bg-white border border-gray-200 p-8 rounded-3xl shadow-sm  transition-all duration-500 overflow-hidden `}
               >
                 <div
                   className={`absolute top-0 right-0 w-32 h-32  bg-gradient-to-br ${item.glowGradient} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500 rounded-full`}

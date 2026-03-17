@@ -57,7 +57,7 @@ function Partner() {
         <div className="grid md:grid-cols-2 gap-10">
           
           {/* Academic Institutions */}
-          <div className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-sky-100">
+          <div className="group bg-white p-8 rounded-3xl shadow-md  transition-all duration-500 border border-sky-100">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-[#1AA0C8]/10 p-4 rounded-2xl">
                 <GraduationCap className=" text-cyan-600" size={30} />
@@ -74,7 +74,7 @@ function Partner() {
           </div>
 
           {/* Mid Market Enterprises */}
-          <div className="group bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-sky-100">
+          <div className="group bg-white p-8 rounded-3xl shadow-md transition-all duration-500 border border-sky-100">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-[#1AA0C8]/10 p-4 rounded-2xl">
                 <Building2 className=" text-cyan-600" size={30} />

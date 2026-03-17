@@ -1,7 +1,5 @@
 // import {ExternalLink } from "lucide-react";
-import { useRef } from "react";
-import acascreen from "../assets/acascreen.png";
-import enterscreen from "../assets/enterscreen.png";
+import { useRef, useState } from "react";
 
 interface Pillar {
   icon: React.ReactNode;
@@ -11,7 +9,6 @@ interface Pillar {
   capability: string;
   benefit: string;
   link: string;
-  preview?: any;
 }
 
 const pillars2: Pillar[] = [
@@ -38,7 +35,6 @@ const pillars2: Pillar[] = [
     capability:
       "Purpose-built for universities, research labs, and educational institutions to manage campus IT infrastructure efficiently.",
     benefit:  "Enable students, researchers, and faculty to access reliable infrastructure for innovation and learning.",
-    preview: acascreen,
      
   },
   {
@@ -66,7 +62,6 @@ const pillars2: Pillar[] = [
       "Designed for large enterprises managing multi-cloud, DevOps pipelines, and distributed infrastructure environments.",
     benefit:
       "Deliver scalable observability and automation across hybrid and cloud-native systems.",
-      preview: enterscreen,
   },
 ];
 
@@ -204,7 +199,7 @@ function PillarCard({ item, index }: PillarCardProps) {
     >
       
      <a href="https://catalystsuite.bostontechindia.in/" target="_blank" >
-      <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+      <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm  transition-all duration-300 overflow-hidden">
         
         {/* Hover Glow */}
         {/* <div
@@ -270,90 +265,91 @@ function PillarCard({ item, index }: PillarCardProps) {
         </div>
       </div>
       </a>
-    </div>
+    </div> 
   );
 }
 
+
 function PillarCard2({ item, index }: PillarCardProps) {
   const ref = useRef<HTMLDivElement | null>(null);
+  const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = ref.current?.getBoundingClientRect();
+    if (!rect) return;
+
+    setPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
 
   return (
     <div
       ref={ref}
+      onMouseMove={handleMouseMove}
       style={{
         opacity: 1,
         transform: "translateY(0)",
-        transition: `all 0.6s ease ${index * 0.12}s`,
+        transition: `all 0.6s ease ${index * 0.1}s`,
       }}
     >
       <a href={item.link} target="_blank" rel="noopener noreferrer">
-        <div className="group relative h-full rounded-2xl bg-white border border-cyan-100 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden">
+        <div className="group relative cursor-pointer h-full rounded-2xl p-[1px] transition-all duration-500">
 
-          {/* NORMAL CONTENT */}
-          <div className="p-7 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+          {/* 🔥 Glow Border */}
+          <div
+            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500"
+            style={{
+              background: `linear-gradient(120deg, ${item.accent}, transparent, ${item.accent})`,
+            }}
+          />
 
-            <div className="flex items-center gap-4 mb-5">
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center"
-                style={{
-                  background: `${item.accent}15`,
-                  border: `1px solid ${item.accent}40`,
-                  color: item.accent,
-                }}
-              >
-                {item.icon}
-              </div>
+          {/* 🧊 Card Content */}
+          <div
+            className="relative rounded-2xl bg-white border border-gray-200 h-full p-7 overflow-hidden"
+          >
 
-              <h3 className="text-lg font-semibold text-[#1E5DB3]">
-                {item.title}
-              </h3>
+            {/* 💡 Spotlight Effect */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300"
+              style={{
+                background: `radial-gradient(250px circle at ${position.x}px ${position.y}px, ${item.accent}20, transparent 60%)`,
+              }}
+            />
+
+            {/* 🔹 Icon */}
+            <div
+              className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
+              style={{
+                background: `${item.accent}15`,
+                color: item.accent,
+              }}
+            >
+              {item.icon}
             </div>
 
-            <p className="text-gray-600 text-sm mb-6">
+            {/* 🔹 Title */}
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">
+              {item.title}
+            </h3>
+
+            {/* 🔹 Description */}
+            <p className="text-gray-600 text-sm leading-relaxed mb-5">
               {item.capability}
             </p>
 
+            {/* 🔹 Benefit */}
             <div
-              className="inline-flex px-3 py-1.5 rounded-lg text-xs font-medium"
+              className="text-xs font-medium inline-block px-3 py-1 rounded-md"
               style={{
                 background: `${item.accent}12`,
-                border: `1px solid ${item.accent}30`,
                 color: item.accent,
               }}
             >
               {item.benefit}
             </div>
-
           </div>
-
-
-          {/* HOVER IMAGE */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
-
-            {/* image with zoom */}
-            <img
-              src={item.preview}
-              className="w-full h-full  scale-110 group-hover:scale-100 transition-transform duration-500"
-            />
-
-            {/* gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-
-            {/* text */}
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white translate-y-6 group-hover:translate-y-0 transition-all duration-500">
-
-              <h3 className="text-lg font-semibold">
-                {item.title}
-              </h3>
-
-              <p className="text-sm opacity-90">
-                Visit Website →
-              </p>
-
-            </div>
-
-          </div>
-
         </div>
       </a>
     </div>
@@ -361,7 +357,7 @@ function PillarCard2({ item, index }: PillarCardProps) {
 }
 
 export default function Suite() {
-  return (
+  return ( 
     <section className="relative py-24 px-6 bg-sky-50 overflow-hidden">
       
       {/* Soft Background Glow */}
