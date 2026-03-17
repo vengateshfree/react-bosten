@@ -8,4 +8,13 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+    server: {
+    proxy: {
+      "/api": {
+        target: "https://bostontechindia.in",
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 })
